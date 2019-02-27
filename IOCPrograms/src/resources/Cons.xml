@@ -1,0 +1,28 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+			
+			<beans>
+			
+		<bean id="t" class="beans.TeacherCon" scope="prototype">
+		<constructor-arg value="Ashok" index="1"></constructor-arg>
+		<constructor-arg value="DP"></constructor-arg>
+					<constructor-arg value="10" type="int"></constructor-arg>
+			</bean>
+			<bean id="s" class="beans.StudentCon">
+			<constructor-arg  value="Ashok"></constructor-arg>
+			<constructor-arg value="12711" type="int"></constructor-arg> 
+			<constructor-arg value="A" type="char"></constructor-arg> 
+			<constructor-arg value="13"></constructor-arg>
+			</bean>
+			<bean id="CI" class="beans.ConstructorInjection2">
+			<property name="st" ref="s"></property>
+			<property name="tc" ref="t"></property> 
+			<constructor-arg value="Narayana Engineering college"></constructor-arg> 
+			</bean>
+			
+			
+			
+			
+			
+			</beans>

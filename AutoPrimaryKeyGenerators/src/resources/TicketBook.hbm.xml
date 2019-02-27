@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    
+    <class name="beans.TicketBook" table="TicketBook" schema="naveen">
+    
+    <id name="tId" >
+    
+    <generator class="increment"></generator>
+    </id>
+    <property name="cName"> </property>
+    <property name="seatNo" ></property>
+    <property name="movieName"></property>
+    
+    
+    
+    </class>
+    
+    
+    
+    
+    </hibernate-mapping>

@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="beans.Employee" table="Employee007" schema="naveen">
+    <id name="empid" column="empid"></id>
+    <discriminator column="etype"></discriminator>
+    <property name="ename" column="empname"></property>
+        <property name="email" column="email"></property>
+<property name="salary" column="salary"></property>    
+
+<subclass name="beans.SWEmployee" discriminator-value="SW">
+<property name="tech" column="technology"></property>
+</subclass>
+<subclass name="beans.HWEmployee" discriminator-value="H">
+<property name="area" column="area"></property>
+</subclass>
+<subclass name="beans.AdminEmployee" discriminator-value="AD">
+<property name="priv" column="priviliges"></property>
+</subclass>
+</class>
+ </hibernate-mapping>

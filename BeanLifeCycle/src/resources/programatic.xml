@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<bean id="sdi" class="bussiness.StudentDaoimpl">
+
+<property name="driver" value="oracle.jdbc.OracleDriver"></property>
+<property name="url" value="jdbc:oracle:thin:192.168.0.103:1521:orcl"></property>
+<property name="user" value="naveen"></property>
+<property name="password" value="naveen"></property>
+<property name="s" ref="std"></property>
+
+
+
+
+</bean>
+<bean id="std" class="beans.Student">
+<property name="rollno" value="100"></property>
+<property name="name" value="naveen"></property>
+<property name="branch" value="SCIENCE"></property>
+<property name="total" value="99"></property>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

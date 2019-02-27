@@ -1,0 +1,29 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			<beans>
+			
+			<bean id="t" class="beans.Teacher" scope="prototype" dependency-check="none">
+			<property name="name" value="Ashok"></property> 
+			<property name="subject" value="Design pattrens"></property>
+			<property name="experience" value="6"></property>
+			
+			
+			
+			</bean>
+			<bean id="s" class="beans.Student">
+			<property name="name" value="Ashok"></property>
+			 <property name="grade" value="A"></property>
+			<property name="rollno" value="12711"></property>
+			<property name="standard" value="13"></property>
+			</bean>
+			<bean id="SI" class="beans.SetterIoc" dependency-check="all" >
+			<property name="st" ref="s"></property>
+			 <property name="tc" ref="t"></property>
+			<property name="college" value="Narayana Engineering college"></property>
+			</bean>
+			
+			
+			
+			
+			
+			</beans>

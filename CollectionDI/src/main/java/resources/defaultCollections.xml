@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="dc" class="beans.DefaultCollectionClasses">
+	<property name="fruits">
+	<list>
+	<value>Apple</value>
+	<value>Mango</value>
+	<value>Grape</value>
+	<value>Guava</value>
+	<value>Orange</value>
+	
+	</list>
+		</property>
+<property name="vegitables">
+<set>
+
+<value>Cocumber</value>
+	<value>Carrot</value>
+	<value>Chilli</value>
+	<value>Capsicum</value>
+	<value>Tomato</value>
+</set>
+</property>	
+<property name="cc">
+<map>
+<entry key="india" value="Delhi"></entry>
+<entry key="USA" value="NewYork"></entry>
+<entry key="UK" value="London"></entry>
+<entry key="Belgium" value="Brussels"></entry>
+
+</map>
+
+
+</property>	
+	</bean>
+	</beans>

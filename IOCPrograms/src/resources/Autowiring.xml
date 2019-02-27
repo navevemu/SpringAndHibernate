@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+
+
+default-autowire="autodetect">
+<bean id="t" class="beans.Teacher" scope="prototype" dependency-check="none">
+			<property name="name" value="Ashok"></property> 
+			<property name="subject" value="Design pattrens"></property>
+			<property name="experience" value="6"></property>
+			</bean>
+			<bean id="s" class="beans.Student">
+			<property name="name" value="Ashok"></property>
+			 <property name="grade" value="A"></property>
+			<property name="rollno" value="12711"></property>
+			<property name="standard" value="13"></property>
+			</bean>
+			
+			<bean id="AW" class="beans.Autowiring" ></bean>
+
+<bean id="t1" class="beans.Teacher" scope="prototype" dependency-check="none" autowire-candidate="true">
+			<property name="name" value="prsad"></property> 
+			<property name="subject" value="Design pattrens"></property>
+			<property name="experience" value="6"></property>
+			</bean>
+
+
+
+
+
+
+
+
+
+
+
+</beans>

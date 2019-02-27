@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean class="beans.Car" id="c" scope="prototype">
+	
+<property name="brand" value="Volvo  "></property>
+<property name="carName" value="XC40"></property>
+<!-- <property name="engineType" ref="e"></property> -->
+<!-- Inner bean approch -->
+<property name="engineType">
+
+<bean class="beans.Engine" id="e" scope="prototype">
+	
+<property name="model" value="4 Pump "></property>
+<property name="hp" value="150"></property>
+	</bean>
+
+</property>
+
+<property name="cost" value="5300000"></property>
+	</bean>
+	</beans>

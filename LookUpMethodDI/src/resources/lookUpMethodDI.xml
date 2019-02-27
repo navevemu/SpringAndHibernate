@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    <!--  -for interface implentation-->
+		<bean id="c" class="beans.Car">
+		<lookup-method name="myCarEngine" bean="e"/>
+		</bean>	
+		
+		
+		<bean id="e" class="beans.Engine">
+		<property name="name" value="SwiftEngine"></property>
+		
+		
+		</bean>
+		
+		
+		
+		<!--  -for Abstract implentation-->
+		<bean id="e1" class="beans.Engine">
+		<property name="name" value="BenzBus"></property>
+		</bean>
+		<bean id="B" class="beans.Bus">
+		<lookup-method name="myBusEngine" bean="e1"/>
+		</bean>	
+		<!--  -for Concrete overide implentation-->
+		<bean id="e2" class="beans.Engine">
+		<property name="name" value="TataTruck"></property>
+		</bean>
+		<bean id="T" class="beans.Truck">
+		<lookup-method name="MyTruckEngine" bean="e2"/>
+		</bean>	
+		
+		</beans>

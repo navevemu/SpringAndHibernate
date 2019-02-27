@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Registration form</title>
+<script type="text/javascript">
+function myformvalidate(){
+	var p1=$(#sname).val();
+	if(p1==''){
+		alert("name is mandatory");
+	return false;
+	}
+});
+
+
+
+
+
+</script>
+</head>
+<body>
+<form action="./studentReg" method="post" id="regform" onsubmit=" return myformvalidate()">
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="sname" id="p1"></td>
+</tr>
+<tr>
+<td>MobileNo:</td><td><input type="text" name="mobno"></td>
+</tr>
+<tr>
+<td>IntrestedCourse:</td><td><input type="text" name="course"></td>
+</tr>
+<tr>
+<td>
+<input type="submit" value="submit">
+</td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>

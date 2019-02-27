@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+		<bean id="IC" class="beans.ParticularCollectionDI">
+		<property name="fruits">
+		<util:list list-class="java.util.LinkedList">
+		<value>Apple</value>
+		<value>Mango</value>
+		</util:list>
+		</property>
+		<property name="cricketers">
+		<util:set set-class="java.util.TreeSet">
+		<value>Dhoni</value>
+		<value>Yuvaraj</value>
+		</util:set>
+		</property>
+		<property name="capitals">
+		<util:map map-class="java.util.TreeMap">
+		<entry key="India" value="New delhi"></entry>
+		<entry key="Pakistan" value="Lahore"></entry>
+		<entry key="America" value="Newyork"></entry>
+		</util:map>
+		
+		</property>
+		
+		 <property name="e">
+		 <util:list list-class="java.util.Vector">
+		 <ref bean="e1"/>
+		 <ref bean="e2"/>
+		 </util:list>
+		 
+		 
+		 </property>
+		</bean>
+		
+		
+		<bean id="e1" class="beans.Engine">
+		<property name="modelName" value="V90"></property>
+		</bean>
+		<bean id="e2" class="beans.Engine">
+		<property name="modelName" value="C90"></property>
+		
+		</bean>
+		
+		
+		</beans>

@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="beans.Employee" table="Employee006" schema="naveen">
+    <id name="empid" column="empid"></id>
+    
+    <property name="ename" column="empname"></property>
+        <property name="email" column="email"></property>
+<property name="salary" column="salary"></property>    
+
+<joined-subclass name="beans.SWEmployee" table="Software">
+<key column="id"> </key>
+<property name="tech" column="technology"></property>
+</joined-subclass>
+
+<joined-subclass name="beans.HWEmployee" table="hardware">
+<key column="id"> </key>
+<property name="area" column="area"></property>
+</joined-subclass>
+<joined-subclass name="beans.AdminEmployee" table="admintable">
+<key column="id"> </key>
+<property name="priv" column="priviliges"></property>
+</joined-subclass>
+</class>
+ </hibernate-mapping>

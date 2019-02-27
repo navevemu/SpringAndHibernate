@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.4">
+  <display-name>HelloWorld Application</display-name>
+  <description>
+        This is a simple web application with a source code organization
+        based on the recommendations of the Application Developer's Guide.
+    </description>
+  <servlet>
+    <servlet-name>sr</servlet-name>
+    <servlet-class>controller.StudentReg</servlet-class>
+    <init-param>
+    <param-name>user_name</param-name>
+    <param-value>naveen</param-value>
+    
+    </init-param>
+    <init-param>
+    <param-name>password</param-name>
+    <param-value>naveen</param-value>
+    
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sr</servlet-name>
+    <url-pattern>/studentReg</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>cr</servlet-name>
+    <servlet-class>controller.CourseReg</servlet-class>
+    <init-param>
+    <param-name>user_name</param-name>
+    <param-value>hr</param-value>
+    
+    </init-param>
+    <init-param>
+    <param-name>password</param-name>
+    <param-value>hr</param-value>
+    
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cr</servlet-name>
+    <url-pattern>/courseReg</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>driver</param-name>
+  <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  
+  </context-param>
+   <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+  
+  </context-param>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

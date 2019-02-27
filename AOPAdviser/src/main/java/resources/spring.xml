@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	 http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+                    <bean id="ara" class="aspect.ARA"></bean>
+                    <bean id="bank" class="bussiness.Bank"></bean>
+                    <bean id="dp" class="pointcut.DepositPointCut"></bean>
+                    <bean id="ad" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+                    <property name="pointcut" ref="dp"></property>
+                    <property name="advice" ref="ara"></property>
+                    </bean>
+                    <bean id="pf" class="org.springframework.aop.framework.ProxyFactoryBean">
+                    <property name="interceptorNames">
+                    <list>
+                    <value>ad</value>
+                    </list>                    
+                    
+                    </property>
+                    <property name="target" ref="bank"></property>
+                    </bean>
+                    
+                    
+                    
+                    
+</beans>

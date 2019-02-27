@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"      
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="c" class="beans.Car">
+	<lookup-method name="myEngine" bean="e1"/>
+	</bean>
+	<bean id ="e1" class="beans.Engine">
+	<property name="eName" value="SwiftEngine"></property>
+	
+	</bean>
+	<bean id ="e2" class="beans.Engine">
+	<property name="eName" value="Ashok leyland Engine"></property>
+	
+	</bean>
+	<bean id ="e3" class="beans.Engine">
+	<property name="eName" value="BhartBenz Engines"></property>
+	</bean>
+	<bean id="b" class="beans.Bus">
+	<lookup-method name="myEngine" bean="e3"/>
+	</bean>
+	<bean id="t" class="beans.Truck">
+	<lookup-method name="myEngine" bean="e2"/>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	</beans>

@@ -1,0 +1,11 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean class="beans.Engine" id="e" scope="prototype">
+	
+<property name="model" value="4 Pump "></property>
+<property name="hp" value="150"></property>
+	</bean>
+	</beans>

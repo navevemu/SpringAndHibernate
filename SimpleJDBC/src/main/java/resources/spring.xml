@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	 http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+                    <bean id ="bds" class="org.apache.commons.dbcp.BasicDataSource">
+                    <property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+                    <property name="url" value="jdbc:oracle:thin:192.168.0.103:1521:orcl"></property>
+                    <property name="username" value="naveen"></property>
+                    <property name="password" value="naveen"></property>
+                    <property name="maxActive" value="15"></property>
+                    <property name="maxIdle" value="5"></property>
+                    <property name="maxWait" value="5000"></property>
+                    </bean>
+                    <bean id="st" class="daoimpl.StudentDaoImpl">
+                    <property name="ds" ref="bds"></property>      
+                    
+                    </bean>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </beans>

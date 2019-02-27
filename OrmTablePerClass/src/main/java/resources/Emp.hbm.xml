@@ -1,0 +1,32 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    
+    <class name="entities.Employee" table="Employee007" schema="naveen">
+    
+    <id name="eid" column="sid">
+        <generator class="sequence"></generator>    
+    </id>
+    <discriminator column ="Etype"></discriminator>
+    <property name="name" column="name"></property>
+   
+    <property name="email" column="email"></property>
+    <property name="salary"></property>
+    <subclass name="entities.SCEmployee" discriminator-value="SC">
+    <property name="gateName"></property>
+    </subclass>
+    
+    <subclass name="entities.HWEmployee" discriminator-value="HW">
+    <property name="dep"></property>
+    </subclass>
+    <subclass name="entities.SWEmployee" discriminator-value="SW">
+    <property name="tool"></property>
+    </subclass>
+    </class>
+    
+    
+    
+    
+    </hibernate-mapping>
